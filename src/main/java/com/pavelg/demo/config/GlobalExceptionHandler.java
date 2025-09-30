@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.server.ResponseStatusException;
 
-import javax.xml.bind.ValidationException;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
