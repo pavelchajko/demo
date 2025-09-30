@@ -1,0 +1,18 @@
+services:
+  mysql:
+    container_name: demo-mysql-db
+    environment:
+      MYSQL_DATABASE: demo
+      MYSQL_USER: local
+      MYSQL_PASSWORD: local
+      MYSQL_ROOT_PASSWORD: toor
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    platform: linux/amd64
+    restart: on-failure
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - .local/mysql/init-db:/docker-entrypoint-initdb.d #initiates the database with the scripts in the local/mysql/init-db folder
+volumes:
+  mysql-data:

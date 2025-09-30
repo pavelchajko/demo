@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: pgichevski
+      changes:
+        - sql:
+            sql: |
+              INSERT INTO users (id, email, full_name, user_state, password_hash, created_date, last_modified_date) VALUES
+                                (UNHEX(REPLACE(UUID(), '-', '')), 'pavel.gichevski@gmail.com', 'Pavel Gichevski', 'ACTIVE', 'password', NOW(), NOW())

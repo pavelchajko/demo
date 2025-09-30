@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: liquibase/changelogs/1.0.initial.yaml
+  - include:
+      file: liquibase/changelogs/2.0.pre-populate-users.yaml
